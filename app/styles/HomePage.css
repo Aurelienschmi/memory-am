@@ -41,7 +41,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     flex: 1 1 calc(20% - 20px); /* Adjust the percentage to control the number of columns */
-    max-width: 200px;
+    max-width: 600px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }

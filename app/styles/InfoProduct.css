@@ -1,0 +1,134 @@
+.product-details {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    height: calc(100vh - 60px); /* 100% de la hauteur de la fenêtre moins la hauteur de la Navbar */
+}
+
+.product-details-image {
+    flex: 1;
+    position: relative; /* Nécessaire pour Image avec layout="fill" */
+    height: 80%; /* Réduit la hauteur à 80% de l'espace disponible */
+    margin: 30px; /* Centre l'image verticalement et horizontalement */
+    overflow: hidden; /* Empêche les débordements */
+}
+
+.product-details-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 50%; /* Prend 50% de la largeur */
+    overflow-y: auto; /* Ajoute un défilement si le contenu dépasse */
+}
+
+/* Titre du produit */
+.product-details-info h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000; /* Titre en noir */
+}
+
+/* Prix du produit */
+.product-price {
+    font-size: 24px;
+    color: #000; /* Prix en noir */
+    margin-bottom: 20px;
+}
+
+/* Taille et Guide des tailles */
+.product-size-container {
+    display: flex;
+    justify-content: space-between; /* Aligne "Taille : normal" à gauche et "Guide des tailles" à droite */
+    align-items: center; /* Centre verticalement les éléments */
+    margin-bottom: 20px; /* Ajoute un espacement en bas */
+}
+
+.product-size {
+    font-size: 18px;
+    color: #000; /* Texte en noir */
+}
+
+.product-size-guide {
+    font-size: 16px;
+    color: #555; /* Texte en gris foncé */
+    text-decoration: underline; /* Souligné */
+    cursor: pointer; /* Curseur pointeur pour indiquer un lien */
+}
+
+/* Bouton "Ajouter au panier" */
+.add-to-cart {
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte en noir */
+    padding: 10px 20px;
+    border: 2px solid #000; /* Bordure noire */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Animation pour l'effet au survol */
+}
+
+.add-to-cart:hover {
+    background-color: #000; /* Fond noir au survol */
+    color: #fff; /* Texte en blanc au survol */
+}
+
+/* Section supplémentaire sous le bouton */
+.product-details-extra {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 20px; /* Espace entre les éléments */
+    margin-top: 20px; /* Espacement au-dessus de la section */
+    font-size: 14px; /* Taille de police pour le texte */
+    color: #000; /* Texte en noir */
+}
+
+.extra-item {
+    text-align: center; /* Centre le texte dans chaque élément */
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.extra-item p {
+    margin: 0;
+    font-size: 12px; /* Texte plus petit pour le sous-titre */
+    color: #888; /* Couleur grise pour le sous-titre */
+}
+
+.extra-item strong {
+    font-size: 14px; /* Texte plus grand pour le titre principal */
+    color: #000; /* Couleur noire pour le titre principal */
+}
+
+.separator {
+    color: #000; /* Couleur noire pour le séparateur */
+    font-size: 16px; /* Taille légèrement plus grande pour le séparateur */
+}
+
+/* Liste sous les extras */
+.product-details-list {
+    margin-top: 20px; /* Espacement au-dessus de la liste */
+    border-top: 1px solid #ddd; /* Ligne séparatrice en haut */
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between; /* Aligne le texte à gauche et la flèche à droite */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 15px 0; /* Espacement vertical pour chaque élément */
+    border-bottom: 1px solid #ddd; /* Ligne séparatrice entre les éléments */
+    font-size: 16px; /* Taille de police */
+    color: #000; /* Texte en noir */
+    cursor: pointer; /* Curseur pointeur pour indiquer un lien */
+}
+
+.list-item:last-child {
+    border-bottom: none; /* Supprime la ligne séparatrice pour le dernier élément */
+}
+
+.arrow {
+    font-size: 18px; /* Taille de la flèche */
+    color: #888; /* Couleur grise pour la flèche */
+}
