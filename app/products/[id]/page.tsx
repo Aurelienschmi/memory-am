@@ -3,28 +3,24 @@
 import React from "react";
 import Image from "next/image";
 import { useParams, notFound } from "next/navigation";
-import Navbar from "../../components/Navbar"; // Import du composant Navbar
+import Navbar from "../../components/Navbar"; 
 import productsData from "../../data/products";
 import "../../styles/InfoProduct.css";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Récupère l'ID depuis l'URL
+  const { id } = useParams();
 
-  // Trouver le produit correspondant à l'ID
   const product = productsData.find((p) => p.id === parseInt(id as string));
 
   if (!product) {
-    notFound(); // Affiche une page 404 si le produit n'existe pas
+    notFound();
   }
 
   return (
     <div>
-      {/* Navbar en haut de la page */}
       <Navbar />
 
-      {/* Contenu principal */}
       <div className="product-details">
-        {/* Image principale à gauche */}
         <div className="product-details-image">
           <Image
             src={product.image}
@@ -34,7 +30,6 @@ const ProductDetails = () => {
           />
         </div>
 
-        {/* Informations du produit à droite */}
         <div className="product-details-info">
           <h1>{product.name}</h1>
           <p className="product-price">€{product.price}</p>
@@ -50,6 +45,16 @@ const ProductDetails = () => {
           <div className="product-size-container">
             <div className="product-size">Taille : normal</div>
             <span className="product-size-guide">Guide des tailles</span>
+          </div>
+          <div className="product-size-options">
+            {["XS", "S", "M", "L", "XL"].map((size) => (
+              <div
+                key={size}
+                className={`size-option ${size === "M" ? "selected" : ""}`}
+              >
+                {size}
+              </div>
+            ))}
           </div>
           <button className="add-to-cart">Ajouter au panier</button>
           <div className="product-details-extra">
@@ -68,7 +73,6 @@ const ProductDetails = () => {
               <strong>EMOTIONS</strong>
             </div>
           </div>
-          {/* Nouvelle section pour la liste */}
           <div className="product-details-list">
             <div className="list-item">
               <span>Description</span>
@@ -80,6 +84,10 @@ const ProductDetails = () => {
             </div>
             <div className="list-item">
               <span>Conseils d&apos;entretien</span>
+              <span className="arrow">›</span>
+            </div>
+            <div className="list-item">
+              <span>Livraison</span>
               <span className="arrow">›</span>
             </div>
           </div>

@@ -132,3 +132,32 @@
     font-size: 18px; /* Taille de la flèche */
     color: #888; /* Couleur grise pour la flèche */
 }
+
+/* Conteneur des options de tailles */
+.product-size-options {
+    display: flex;
+    gap: 10px; /* Espacement entre les tailles */
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Style des options de tailles */
+.size-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Permet à chaque option de prendre un espace égal */
+    height: 50px; /* Hauteur fixe pour chaque option */
+    border: 1px solid #ddd; /* Bordure grise par défaut */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    font-size: 14px; /* Taille de la police */
+    color: #000; /* Texte en noir */
+    cursor: pointer; /* Curseur pointeur pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Animation pour les changements de style */
+}
+
+/* Option sélectionnée */
+.size-option.selected {
+    border: 2px solid #000; /* Bordure noire pour l'option sélectionnée */
+    font-weight: bold; /* Texte en gras */
+}

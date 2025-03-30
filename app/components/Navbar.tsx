@@ -12,6 +12,7 @@ const Navbar: React.FC = () => {
       <ul className="navbar-menu">
         <li>COLLECTION PRINTEMPS</li>
         <li>CHAUSSURES</li>
+        <li> REPETTO X SWARSOSKI</li>
         <li>SACS</li>
         <li>ACTIVEWEAR</li>
         <li>DANSE</li>
